@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramadan and Eid Greetings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url("hyn.png"); 
+      background-size: cover;
+      background-position: center;
+      overflow: hidden; /* Prevent overflow of floating elements */
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: yellow;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .button {
+      padding: 17px 25px;
+      margin: 0 10px;
+      font-size: 1.7rem;
+      cursor: pointer;
+      background-color: #9900ff;
+      color: yellow;
+      border: none;
+      border-radius: 30px;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Floating decorations */
+    .floating-star {
+      position: absolute;
+      animation: float 5s infinite ease-in-out;
+      color: rgb(235, 224, 13);
+    }
+
+    /* Keyframes for floating animation */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Positioning of floating stars */
+    .star {
+      font-size: 24px;
+    }
+
+    .star1 { top: 10%; left: 10%; }
+    .star2 { top: 20%; right: 15%; }
+    .star3 { top: 30%; left: 20%; }
+    .star4 { top: 40%; right: 10%; }
+    .star5 { top: 50%; left: 5%; }
+    .star6 { top: 60%; right: 20%; }
+    .star7 { top: 70%; left: 15%; }
+    .star8 { top: 80%; right: 5%; }
+    .star9 { top: 90%; left: 25%; }
+    .star10 { top: 15%; right: 25%; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="greeting"></h1>
+    <div class="buttons">
+      <button id="ramadanButton" class="button"> 1</button>
+      <button id="eidButton" class="button"> 2</button>
+    </div>
+  </div>
+
+  <!-- Floating stars -->
+  <div class="floating-star star star1">&#9733;</div>
+  <div class="floating-star star star2">&#9733;</div>
+  <div class="floating-star star star3">&#9733;</div>
+  <div class="floating-star star star4">&#9733;</div>
+  <div class="floating-star star star5">&#9733;</div>
+  <div class="floating-star star star6">&#9733;</div>
+  <div class="floating-star star star7">&#9733;</div>
+  <div class="floating-star star star8">&#9733;</div>
+  <div class="floating-star star star9">&#9733;</div>
+  <div class="floating-star star star10">&#9733;</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var greetingElement = document.getElementById('greeting');
+      var ramadanButton = document.getElementById('ramadanButton');
+      var eidButton = document.getElementById('eidButton');
+
+      function displayMessage(message) {
+        greetingElement.textContent = message;
+      }
+
+      ramadanButton.addEventListener('click', function() {
+        displayMessage('Ramadan Kareem!');
+      });
+
+      eidButton.addEventListener('click', function() {
+        displayMessage('Eid Mubarak!');
+      });
+    });
+  </script>
+</body>
+</html>
